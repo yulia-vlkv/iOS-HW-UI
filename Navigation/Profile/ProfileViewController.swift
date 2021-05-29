@@ -28,9 +28,14 @@ class ProfileViewController: UIViewController {
         ])
         bottomButton.setTitleColor(.white, for: .normal)
         bottomButton.layer.backgroundColor = UIColor.systemBlue.cgColor
+        bottomButton.addTarget(self, action: #selector(pushTheButton), for: .touchUpInside)
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+    }
+    
+    @objc func pushTheButton() {
+        print("Click-click")
     }
 }
