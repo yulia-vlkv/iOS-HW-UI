@@ -128,19 +128,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ru-89-vrk">
-                                <rect key="frame" x="171" y="433" width="72" height="30"/>
-                                <state key="normal" title="Open post"/>
-                                <connections>
-                                    <segue destination="Gpo-I4-SnC" kind="show" identifier="post" id="2l2-zd-PhO"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1E0-0v-Ivf">
+                                <rect key="frame" x="16" y="407" width="382" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-X4-Quj">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                                        <color key="backgroundColor" red="0.68627452850000004" green="0.79607844350000001" blue="0.72156864399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="First button in the Stack View">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Gpo-I4-SnC" kind="show" id="PYG-Kz-dvb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5X-Bq-DF4">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="36"/>
+                                        <color key="backgroundColor" red="0.69411766529999996" green="0.80000001190000003" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Second button in the Stack View">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Gpo-I4-SnC" kind="show" id="O5K-eK-l7L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rDk-lR-Mb7"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="9ru-89-vrk" firstAttribute="centerX" secondItem="hnQ-fB-PJI" secondAttribute="centerX" id="ojZ-LA-9mf"/>
-                            <constraint firstItem="9ru-89-vrk" firstAttribute="centerY" secondItem="hnQ-fB-PJI" secondAttribute="centerY" id="z24-rS-igo"/>
+                            <constraint firstItem="rDk-lR-Mb7" firstAttribute="trailing" secondItem="1E0-0v-Ivf" secondAttribute="trailing" constant="16" id="2Ha-04-Vjl"/>
+                            <constraint firstItem="1E0-0v-Ivf" firstAttribute="centerY" secondItem="hnQ-fB-PJI" secondAttribute="centerY" id="B7j-1i-Igl"/>
+                            <constraint firstItem="1E0-0v-Ivf" firstAttribute="centerX" secondItem="hnQ-fB-PJI" secondAttribute="centerX" id="Q0h-ER-06Q"/>
+                            <constraint firstItem="1E0-0v-Ivf" firstAttribute="leading" secondItem="rDk-lR-Mb7" secondAttribute="leading" constant="16" id="r2F-A5-Pdi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="CTA-33-ygc"/>
@@ -237,10 +259,16 @@
             <point key="canvasLocation" x="-142.02898550724638" y="196.875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PYG-Kz-dvb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="angryCat" width="960" height="1280"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
