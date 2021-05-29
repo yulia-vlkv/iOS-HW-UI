@@ -13,7 +13,7 @@
         <scene sceneID="bRX-aC-Cpi">
             <objects>
                 <viewController id="Ca1-kw-dKJ" customClass="ProfileViewController" customModule="Navigation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3" customClass="ProfileHeaderView" customModule="Navigation" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="z6I-Co-0n3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,18 +28,18 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-7h-GAu">
-                                        <rect key="frame" x="142" y="27" width="256" height="18"/>
+                                        <rect key="frame" x="142" y="27" width="256" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="sVf-ri-Z36"/>
+                                            <constraint firstAttribute="height" constant="20" id="sVf-ri-Z36"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCk-cc-sKo">
-                                        <rect key="frame" x="142" y="62" width="256" height="14"/>
+                                        <rect key="frame" x="142" y="57" width="256" height="16"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="co7-Xw-6bS"/>
+                                            <constraint firstAttribute="height" constant="16" id="co7-Xw-6bS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -73,13 +73,20 @@
                                     <constraint firstItem="sCA-7h-GAu" firstAttribute="leading" secondItem="ccu-4N-bpo" secondAttribute="trailing" constant="16" id="RrZ-J0-0Ra"/>
                                     <constraint firstAttribute="trailing" secondItem="sCA-7h-GAu" secondAttribute="trailing" constant="16" id="UYm-ek-7hf"/>
                                     <constraint firstItem="2PA-jX-Zdm" firstAttribute="top" secondItem="ccu-4N-bpo" secondAttribute="bottom" constant="16" id="UoM-g4-LAF"/>
-                                    <constraint firstItem="nis-yO-mDP" firstAttribute="top" secondItem="RCk-cc-sKo" secondAttribute="bottom" constant="10" id="VjC-sL-pds"/>
+                                    <constraint firstItem="nis-yO-mDP" firstAttribute="top" secondItem="RCk-cc-sKo" secondAttribute="bottom" constant="13" id="VjC-sL-pds"/>
                                     <constraint firstAttribute="trailing" secondItem="RCk-cc-sKo" secondAttribute="trailing" constant="16" id="hPk-7o-OW3"/>
                                     <constraint firstItem="2PA-jX-Zdm" firstAttribute="top" secondItem="nis-yO-mDP" secondAttribute="bottom" constant="16" id="iUI-yc-Flq"/>
                                     <constraint firstAttribute="height" constant="220" id="lw3-1T-KWI"/>
                                     <constraint firstItem="2PA-jX-Zdm" firstAttribute="leading" secondItem="u82-o2-8UG" secondAttribute="leading" constant="16" id="nc3-xn-M8O"/>
                                     <constraint firstAttribute="trailing" secondItem="nis-yO-mDP" secondAttribute="trailing" constant="16" id="t7c-IZ-lfa"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="ccu-4N-bpo" id="0FA-NL-eLl"/>
+                                    <outlet property="fullNameLabel" destination="sCA-7h-GAu" id="m0t-10-EHs"/>
+                                    <outlet property="setStatusButton" destination="2PA-jX-Zdm" id="u9d-Y9-l9q"/>
+                                    <outlet property="statusLabel" destination="RCk-cc-sKo" id="MiB-95-yZv"/>
+                                    <outlet property="statusTextField" destination="nis-yO-mDP" id="7wH-IX-Yhv"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FCL-IZ-fe8"/>
@@ -89,13 +96,6 @@
                             <constraint firstItem="FCL-IZ-fe8" firstAttribute="trailing" secondItem="u82-o2-8UG" secondAttribute="trailing" id="hfY-n0-2Af"/>
                             <constraint firstItem="u82-o2-8UG" firstAttribute="top" secondItem="FCL-IZ-fe8" secondAttribute="top" id="yZC-fu-IuO"/>
                         </constraints>
-                        <connections>
-                            <outlet property="avatarImageView" destination="ccu-4N-bpo" id="Rtx-F3-fMc"/>
-                            <outlet property="fullNameLabel" destination="sCA-7h-GAu" id="CBC-Qt-SWs"/>
-                            <outlet property="setStatusButton" destination="2PA-jX-Zdm" id="U9F-YD-PoL"/>
-                            <outlet property="statusLabel" destination="RCk-cc-sKo" id="qjB-PK-bgK"/>
-                            <outlet property="statusTextField" destination="nis-yO-mDP" id="jLO-FC-YJg"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="TPi-FS-zh0"/>
                 </viewController>
