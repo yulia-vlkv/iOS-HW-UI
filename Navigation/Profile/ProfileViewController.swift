@@ -10,20 +10,27 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    private let header: ProfileHeaderView = ProfileHeaderView()
+    private let bottomButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Изменить цвет фона
+        
         view.backgroundColor = .lightGray
-        // Добавить экземпляр класса ProfileHeaderView как subview
-        view.addSubview(header)
+        
+        self.view.addSubview(bottomButton)
+        bottomButton.translatesAutoresizingMaskIntoConstraints = false
+        bottomButton.setTitle("Another Button", for: .normal)
+        NSLayoutConstraint.activate([
+            bottomButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            bottomButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            bottomButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            bottomButton.heightAnchor.constraint(equalToConstant: 55)
+        ])
+        bottomButton.setTitleColor(.white, for: .normal)
+        bottomButton.layer.backgroundColor = UIColor.systemBlue.cgColor
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        // Задать frame, равный frame корневого view
-        header.frame = view.frame
     }
-
 }
