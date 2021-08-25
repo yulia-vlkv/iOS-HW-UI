@@ -178,6 +178,7 @@
             <point key="canvasLocation" x="-142.02898550724638" y="196.875"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="periwinkleBlue"/>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
